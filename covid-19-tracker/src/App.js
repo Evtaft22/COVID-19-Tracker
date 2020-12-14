@@ -23,7 +23,7 @@ const App = () => {
   const [tableData, setTableData] = useState([]);
   const [casesType, setCasesType] = useState("cases");
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapZoom, setMapZoom] = useState(2);
   const [dateQuery, setDateQuery] = useState(100);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ const App = () => {
         setCountryInfo(data);
         if (countryCode === "worldwide") {
           setMapCenter({ lat: 34.80746, lng: -40.4796 });
-          setMapZoom(0);
+          setMapZoom(2);
         } else {
           setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
           setMapZoom(4);
